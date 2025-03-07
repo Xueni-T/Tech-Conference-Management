@@ -1,20 +1,6 @@
-# EventSphere - Command Line Interface
+# TechConferenceManagement - Command Line Interface
 
-
-EventSphere is a full-stack application with a Command Line Interface (CLI) component designed to manage configuration parameters, simulate event operations, and maintain system user data. Developed using core Object-Oriented Programming (OOP) principles, the application connects to a MySQL database for robust and persistent data storage.
-
-## Table of Contents
-- [EventSphere - Command Line Interface](#eventsphere---command-line-interface)
-  - [Table of Contents](#table-of-contents)
-  - [Features](#features)
-  - [Technologies Used](#technologies-used)
-  - [Installation and Setup](#installation-and-setup)
-    - [Prerequisites](#prerequisites)
-    - [Setup Instructions](#setup-instructions)
-  - [Usage](#usage)
-  - [License](#license)
-
----
+TechConferenceManagement is a full-stack application with a Command Line Interface (CLI) for managing configurations, simulating events, and maintaining user data. It uses **Java** and **MySQL** for data storage.
 
 ## Features
 
@@ -41,20 +27,14 @@ EventSphere is a full-stack application with a Command Line Interface (CLI) comp
 
 ### Setup Instructions
 
-1. **Clone the Repository**  
-   Clone the EventSphere repository from GitHub:
+1. **Navigate to the Command Line Interface Folder**
    ```bash
-   git clone https://github.com/yrgamage/EventSphere.git
-   ```
-2. **Navigate to the Command Line Interface Folder**
-   ```bash
-   cd EventSphere/command_line_interface_project
+   cd TechConferenceManagement/CLI
    ```
    
 3. **Import the Project in Your IDE**
     - Open your preferred Java IDE (ex: IntelliJ IDEA, Eclipse, Visual Studio Code).
     - Import the project as a Maven project.
-
 
 4. **Configuring the MySQL Database**
    - Update the database connection details in the `DatabaseConnector.java` file to reflect your MySQL setup:
@@ -69,7 +49,6 @@ EventSphere is a full-stack application with a Command Line Interface (CLI) comp
         - Replace the `USERNAME`, `PASSWORD` and `DATABASE_NAME ` fields in the `DatabaseConnector.java` file.
         - The database will be created automatically if it does not already exist due to the `?createDatabaseIfNotExist=true` parameter.
 
-
 5. **Run the Application**
     - Build the project using Maven.
     - Run the `Main.java` file to launch the application.
@@ -82,9 +61,3 @@ EventSphere is a full-stack application with a Command Line Interface (CLI) comp
 2. Follow the on-screen menu to perform operations:
     - Add configuration parameters.
     - Start simulations based on the users.
-
----
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
