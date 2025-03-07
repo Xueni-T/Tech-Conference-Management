@@ -59,18 +59,44 @@ This system provides comprehensive tools for conference organizers and participa
 ### Backend Setup Instructions
 
 1. **Clone the Repository**  
-   Clone the backend repository to your local machine:
-   ```bash
-   git clone https://github.com/Xueni-T/Tech-Conference-Management.git
+    Clone the backend repository to your local machine:
+    ```bash
+    git clone https://github.com/Xueni-T/Tech-Conference-Management.git
+    ```
 
-2. **Build the Docker Image**
-  Navigate to the frontend directory and build the Docker image:
+2. **Configure Database Connection**  
+    Update the `application.yml` file under the `src/main/resources` directory with your MySQL credentials:
+    ```yaml
+    spring:
+      datasource:
+         url: jdbc:mysql://localhost:3306/conference_db?createDatabaseIfNotExist=true
+         username: your_username
+         password: your_password
+    ```
 
-  ```bash
-  cd frontend
-  docker build -t tech-conference-frontend .
+3. **Build and Run the Application**  
+    Build and run the backend using Maven:
+    ```bash
+    mvn clean install
+    mvn spring-boot:run
+    ```
+### Frontend Setup Instructions
 
-3. **Run the Docker Container**
-  Start the frontend application in a Docker container:
-  ```bash
-  docker run -d -p 80:80 tech-conference-frontend
+1. **Clone the Repository**  
+    Clone the frontend repository:
+    ```bash
+    git clone https://github.com/yourusername/tech-conference-management-frontend.git
+    ```
+
+2. **Build the Docker Image**  
+    Navigate to the frontend directory and build the Docker image:
+    ```bash
+    cd frontend
+    docker build -t tech-conference-frontend .
+    ```
+
+3. **Run the Docker Container**  
+    Start the frontend application in a Docker container:
+    ```bash
+    docker run -d -p 80:80 tech-conference-frontend
+    ```
